@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+
+void translatin(int,int,int,int);
+void main()
+{
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);
+setcolor(3);
+translation(5,3,12,14);
+getch();
+}
+
+void translation(int figure[],int edges,int dx, int dy)
+{
+int i;
+for(i=0;i<edges;i++)
+{
+figure[2*i] +=dx;
+figure[2*i+1] +=dy;
+}
+}

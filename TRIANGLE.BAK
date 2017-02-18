@@ -1,0 +1,24 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int gd=DETECT,gm;
+int a,b,c;
+int points[]={120,200,300,200,200,250,120,200}; //cordinates of triangle
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);   //set background color of window
+drawpoly(4,points);        //function for triangle
+outtext("press any key for close graphics mode .....................");
+getch();
+cleardevice();
+//closegraph();
+//int a,b,c;
+printf("Enter two numbers :");
+scanf("%d%d",&a,&b);
+c=a+b;
+printf("addition is : %d",c);
+
+getch();
+}

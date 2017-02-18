@@ -1,0 +1,16 @@
+#include<conio.h>
+#include<stdio.h>
+#include<graphics.h>
+void main()
+{
+int gd=DETECT,gm;
+int points[8]={100,100,200,200,300,300,100,100};
+clrscr();
+initgraph(&gm,&gd,"C:\\TURBO3\\BGI");
+setbkcolor(9);
+setcolor(2);
+drawpoly(3,points);
+getch();
+graphdefaults();
+getch();
+}

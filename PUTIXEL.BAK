@@ -1,0 +1,19 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int gd=DETECT,gm;
+int i,x=10,y=15;
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(7);
+setcolor(4);
+for(i=0;i<100;i++)
+{
+putpixel(x,y,RED);
+x=x++;
+y=y++;
+}
+getch();
+}

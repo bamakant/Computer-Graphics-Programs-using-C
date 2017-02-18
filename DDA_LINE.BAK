@@ -1,0 +1,41 @@
+#include<conio.h>
+#include<stdio.h>
+#include<graphics.h>
+#include<stdlib.h>
+#include<dos.h>
+#include<process.h>
+void main()
+{
+int gd=DETECT,gm;
+int x1,y1,x2,y2,i;
+float x,y,dx,dy,length;
+clrscr();
+initgraph(&gm,&gd,"C:\\TURBOC3\\BGI");
+setbkcolor(7);
+setcolor(3);
+outtextxy(5,5,"Enter cordinates of line :");
+scanf("%d%d%d%d",&x1,&x2,&y1,&y2);
+dx=x2-x1;
+dy=y2-y1;
+if(dx>=dy)
+{
+length=dx; }
+else
+{length=dy;
+}
+dx=(dx/length);
+dy=(dy/length);
+x=x+0.5;
+y=y+0.5;
+
+i=1;
+while(i<=length)
+{
+putpixel(x,y,4);
+x=x+dx;
+y=y+dy;
+i++;
+}
+getch();
+//system("pause");
+}

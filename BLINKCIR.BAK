@@ -1,0 +1,30 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<dos.h>
+#include<ctype.h>
+#include<math.h>
+#define solide_line
+
+void main()
+{
+int gd=DETECT,gm,i;
+//int points[]={100,100,100,150,150,150,150,100,125,75,100,100};
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);   //set background color of window
+//for(i=0;i<5;i++)
+//{
+while(!kbhit())
+{
+circle(125,125,50);
+setfillstyle(1,5);
+fillellipse(125,125,50,50);
+line(5,300,125,125);
+fflush(stdin);
+}
+//setlinestyle(solide_line,1,2,RED);
+//line(1,500,125,125);
+fflush(stdin);
+}

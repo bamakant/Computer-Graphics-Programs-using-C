@@ -1,0 +1,49 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int gd=DETECT,gm,encounter;
+int points[]={100,100,100,150,150,150,150,100,125,75,100,100};
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);   //set background color of window
+circle(125,125,50);
+setfillstyle(1,5);
+fillellipse(125,125,50,50);
+setcolor(4);
+//setfillstyle(1,10);
+//fillellipse(100,100,25,25);
+//fillellipse(100,100,75,10);
+//floodfill(100,100,4);
+drawpoly(6,points);
+setfillstyle(1,10);
+fillpoly(6,points);
+getch();
+cleardevice();
+//circle(150,125,50);
+setfillstyle(1,5);
+fillellipse(200,125,50,50);
+getch();
+cleardevice();
+setfillstyle(1,5);
+fillellipse(250,125,50,50);
+getch();
+cleardevice();
+setfillstyle(1,5);
+fillellipse(300,125,50,50);
+getch();
+
+cleardevice();
+setfillstyle(1,5);
+fillellipse(350,125,50,50);
+
+while(encounter--)
+{
+sound(10*random(75));      //background sound
+delay(50);
+nosound();
+}
+getch();
+}

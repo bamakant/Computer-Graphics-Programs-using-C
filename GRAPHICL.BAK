@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<process.h>
+#include<stdlib.h>
+void main()
+{
+int gd="DETECT" ,gm;
+//clrscr();
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+setbkcolor(4);
+system("pause");
+}

@@ -1,0 +1,43 @@
+#include<device.h>
+#include<stdio.h>
+#include<graphics.h>
+#include<dos.h>
+#include<math.h>
+
+void main(int xa, int ya, int xb, int yb)
+{
+int gd=DETECT,gm;
+//initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+//setbkcolor(8);
+int dx=abs(xa-xb), dy=(ya-yb);
+int p=2*dy-dx;
+int twoDy=2*dy,twoDyDx=2*(dy-dx);
+int x,y,xEnd;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(8);
+if(xa>xb)
+{
+x=xb;
+y=yb;
+xEnd=xa;
+}
+else
+{
+x=xa;
+y=ya;
+xEnd=xb;
+}
+setpixel(x,y);
+while(x<xEnd)
+{
+x++;
+if(p<0)
+p+=twoDy;
+else
+{
+y++;
+p+=twoDyDx;
+}
+setpixel(x,y);
+}
+}

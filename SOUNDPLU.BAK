@@ -1,0 +1,37 @@
+#include<conio.h>
+#include<stdio.h>
+#include<graphics.h>
+#include<dos.h>
+#include<stdlib.h>   //headerfile for random sound
+
+void main()
+{
+
+int gd=DETECT,gm,encounter=75;
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(11);                         //set background color of window
+setcolor(4);                            //set color of border of ranctangle
+rectangle(50,300,300,400);     // draw a ractangle parameter are given
+setcolor(9);           //set boundry color of circle
+circle(175,350,50);          //draw a cirle whose center is 175and350 and radius is 50
+
+
+setfillstyle(1,10);
+fillellipse(175,350,50,50);  //fill color  on circle
+
+
+
+while(encounter--)
+{
+sound(10*random(75));      //background sound
+delay(50);
+nosound();
+//textattr(random(16)+'a'+BLINK);
+//cprintf("*");
+}
+
+
+
+getch();
+}

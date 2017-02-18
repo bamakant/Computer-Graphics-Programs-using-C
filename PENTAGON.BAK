@@ -1,0 +1,15 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int gd=DETECT,gm;
+int points[]={120,150,120,200,140,220,200,200,200,150,120,150};
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);   //set background color of window
+drawpoly(6,points);
+setcolor(7);
+fillpoly(6,points);
+getch();
+}

@@ -1,0 +1,23 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int gd=DETECT,gm;
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);   //set background color of window
+setcolor(3);      //set color of arc
+line(50,20,50,230);
+
+
+arc(50,75,260,135,50);      // here (100,100) are the centre of arc,
+arc(50,175,270,100,50);    //0 is the satrting angle
+			    //135 is the end
+			     //50 is the radius of arc
+line(150,100,100,230);
+line(150,100,200,230);
+line(190,165,175,165);
+
+getch();
+}

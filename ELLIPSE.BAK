@@ -1,0 +1,17 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int gd=DETECT,gm;
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);   //set background color of window
+ellipse(200,150,0,360,50,25); //(200,150) is center 0 and 360 is start and end angle
+ellipse(200,150,0,360,25,50); //50 is major axis and 25 is minor axis
+//setfillstyle(1,10);
+circle(200,150,25);
+circle(200,150,50);
+//fillellipse(200,150,360,25);
+getch();
+}

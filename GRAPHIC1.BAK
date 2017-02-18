@@ -1,0 +1,19 @@
+#include<conio.h>
+#include<stdio.h>
+#include<graphics.h>
+void main()
+{
+int gd=DETECT,gm;
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(11);
+setcolor(4);
+rectangle(50,300,300,400);
+setcolor(4);
+circle(175,350,50);
+setfillstyle(1,10);
+fillellipse(175,350,50);
+
+
+getch();
+}

@@ -1,0 +1,22 @@
+#include<graphics.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int gd=DETECT,gm;
+int x=25,y=30,font=0;
+clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(7);
+setcolor(4);
+moveto(50,50);
+linerel(100,100);
+for(font=0;font<3;font++)
+{
+settextstyle(font,HORIZ_DIR,1);
+outtextxy(25,25,"Bama kant kar coding this program for font change");
+x=x+10;
+y=y+25;
+}
+getch();
+}

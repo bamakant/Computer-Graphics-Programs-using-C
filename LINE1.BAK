@@ -1,0 +1,31 @@
+//#include<device.h>
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+#include<dos.h>
+#include<math.h>
+#define setpixel
+
+void main()
+{
+int gd=DETECT,gm;
+//clrscr();
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+setbkcolor(6);
+//void floodfill4(int,int,int,int);
+
+void floodfill4(int a,int b,int color,int oldcolor)
+{
+a=10,b=15,color=9,oldcolor=2;
+if(getpixel(a,b)==oldcolor)
+{
+setcolor(color);
+setpixel(a,b);
+floodfill4(a+1,b,color,oldcolor);
+floodfill4(a-1,b,color,oldcolor);
+floodfill4(a,b+1,color,oldcolor);
+floodfill4(a,b-1,color,oldcolor);
+}
+}
+getch();
+}
