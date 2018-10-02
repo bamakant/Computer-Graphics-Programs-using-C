@@ -1,2 +1,3 @@
-# My-Graphics-Programs-using-C
-When I was in 4th sem during my Diploma Engineering course, I had coded these grapics programs.
+# Computer Graphics programs usign C programming language.
+This repository contains some programs of computer graphics written in C programming language.
+If anyone want to add more Graphics programs then please add here.
